@@ -1,4 +1,8 @@
 <?php
+
+namespace Abasb75\Nanodicom\Core;
+use Abasb75\Nanodicom\Nanodicom;
+
 /**
  * nanodicom/core.php file
  *
@@ -134,22 +138,10 @@ abstract class Nanodicom_Core {
 	 * @param   string     type of data passed
 	 * @return  Dicom_tool A Tool
 	 */
-	public static function factory($location, $name = 'simple', $type = 'file')
+	public static function factory($location, $name = 'Simple', $type = 'file')
 	{
-		// Get the parts from the name
-		$parts = explode('_', $name);
-		
-		$directory = NANODICOMROOT.'tools'.DIRECTORY_SEPARATOR;
-		
-		// Load all the needed files
-		foreach ($parts as $part)
-		{
-			require_once $directory.strtolower($part).'.php';
-			$directory .= strtolower($part).DIRECTORY_SEPARATOR;
-		}
-
 		// Add the Dicom prefix
-		$class = 'Dicom_'.$name;
+		$class = '\Abasb75\Nanodicom\Tools\Dicom_'.$name;
 
 		return new $class($location, $name, $type);
 	}
@@ -280,11 +272,6 @@ abstract class Nanodicom_Core {
 	 */
 	public function __construct($location, $name, $type)
 	{
-		// Load necessary files
-		require_once NANODICOMCOREPATH.'exception.php';
-
-		// Load the dictionary
-		require_once NANODICOMCOREPATH.'dictionary.php';
 
 		self::$_read_int = (PHP_INT_SIZE > 4) ? '_read_int_64' : '_read_int_32';
 		self::$_write_int = (PHP_INT_SIZE > 4) ? '_write_int_64' : '_write_int_32';

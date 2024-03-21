@@ -1,4 +1,8 @@
 <?php
+
+namespace Abasb75\Nanodicom\Tools\Anonymizer;
+use Abasb75\Nanodicom\Tools\Dicom_Anonymizer;
+
 /**
  * tools/anonymizer/clinicaltrial.php file
  *

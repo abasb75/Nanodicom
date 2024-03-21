@@ -1,4 +1,8 @@
 <?php
+
+namespace Abasb75\Nanodicom\Core;
+
+
 /**
  * nanodicom/exception.php file
  *

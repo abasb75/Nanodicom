@@ -1,4 +1,7 @@
 <?php
+
+namespace Abasb75\Nanodicom\Core;
+
 /**
  * nanodicom/dictionary.php file
  *

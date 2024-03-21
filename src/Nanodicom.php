@@ -1,5 +1,8 @@
 <?php
 
+namespace Abasb75\Nanodicom;
+
+use Abasb75\Nanodicom\Core\Nanodicom_Core;
 /**
  * nanodicom.php file
  *
@@ -15,9 +18,6 @@
 define('NANODICOMROOT', realpath(dirname(__FILE__)).DIRECTORY_SEPARATOR);
 define('NANODICOMCOREPATH', realpath(dirname(__FILE__)).DIRECTORY_SEPARATOR.'nanodicom'.DIRECTORY_SEPARATOR);
 
-// Require the core class
-require_once NANODICOMCOREPATH.'core.php';
-
 /**
  * abstract Nanodicom class.
  *
@@ -29,4 +29,4 @@ require_once NANODICOMCOREPATH.'core.php';
  * @copyright  (c) 2010-2011
  * @license    http://www.opensource.org/licenses/mit-license.php MIT-license
  */
-class Nanodicom {}
+abstract class Nanodicom extends Nanodicom_Core {}

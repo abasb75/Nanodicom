@@ -1,4 +1,8 @@
 <?php
+
+namespace Abasb75\Nanodicom\Tools;
+use Abasb75\Nanodicom\Nanodicom;
+
 /**
  * tools/pixeler.php file
  *
