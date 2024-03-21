@@ -1,0 +1,15 @@
+{
+    "name": "abasb75/nanodicom",
+    "autoload": {
+        "psr-4": {
+            "Abasb75\\Nanodicom\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Abbas Bagheri",
+            "email": "abasbagheria@gmail.com"
+        }
+    ],
+    "require": {}
+}

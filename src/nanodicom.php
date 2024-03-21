@@ -1,4 +1,6 @@
 <?php
+
+namespace Abasb75\Nanodicom;
 /**
  * nanodicom.php file
  *
